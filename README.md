@@ -7,3 +7,6 @@
 7) python manage.py makemigrations
 8) python manage.py migrate
 9) python manage.py runserver
+
+
+** sudo apt-get install libmysqlclient-dev
