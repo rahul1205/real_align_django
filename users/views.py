@@ -6,6 +6,8 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from users.models import UserProfile
 
+def splash_screen(request):
+    return render(request, 'home.html')
 def login(request):
     if request.user.is_authenticated:
         return redirect('/userprofile')
@@ -20,10 +22,10 @@ def login(request):
             return redirect('/userprofile')
             
         else:
-            return render(request, 'base.html', {"invalid_login": True})
+            return render(request, 'login.html', {"invalid_login": True})
 
      # return HttpResponse("<h1>%s</h1><p>%s</p>" % (title, cal))
-    return render(request, 'base.html')
+    return render(request, 'login.html')
 
 def signup(request):
     if request.method == 'POST':

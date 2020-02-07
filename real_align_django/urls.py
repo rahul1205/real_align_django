@@ -18,6 +18,7 @@ from django.conf.urls import url, include
 from users import views as user_views
 
 urlpatterns = [
+    url('home', user_views.splash_screen),
     url('admin', admin.site.urls),
     url('login', user_views.login),
     url('register', user_views.signup),
