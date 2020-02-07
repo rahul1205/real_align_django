@@ -10,3 +10,5 @@
 
 
 ** sudo apt-get install libmysqlclient-dev
+** sudo ufw delete allow 8000
+** sudo ufw allow 'Nginx Full'
