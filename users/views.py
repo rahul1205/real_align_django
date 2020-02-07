@@ -6,8 +6,9 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from users.models import UserProfile
 
-def splash_screen(request):
+def splash_screen(request, excption=None):
     return render(request, 'home.html')
+
 def login(request):
     if request.user.is_authenticated:
         return redirect('/userprofile')
